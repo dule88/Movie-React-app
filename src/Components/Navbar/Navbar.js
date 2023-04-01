@@ -1,10 +1,11 @@
+import { Link } from "react-router-dom";
 
 const Navbar = () => {
 
   return (
     <nav className= "navbar navbar-expand-lg bg-dark py-1" >
         <div className="container-fluid navbar-dark">
-        <a className="navbar-brand"><i className="fa-brands fa-cotton-bureau fa-2xl p-3"></i></a>
+        <a href="/"className="navbar-brand"><i className="fa-brands fa-cotton-bureau fa-2xl p-3"></i></a>
         <button className="navbar-toggler " type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
             
             <span className="navbar-toggler-icon"></span>
@@ -13,13 +14,10 @@ const Navbar = () => {
         <div className="collapse navbar-collapse" id="navbarNav">
             <ul className="navbar-nav">
                 <li className="nav-item">
-                    <a className="nav-link active" aria-current="page">Home</a>
+                    <Link className="nav-link active" aria-current="page" to="/">Home</Link>
                 </li>
                 <li className="nav-item">
-                    <a className="nav-link">Cart</a>
-                </li>
-                <li className="nav-item">
-                    <a className="nav-link"></a>
+                    <Link className="nav-link" to="/cart">Cart</Link>
                 </li>
             </ul>
             <form class="d-flex" role="search">
