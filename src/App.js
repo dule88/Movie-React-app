@@ -1,10 +1,18 @@
 import './App.css';
 
+
+import Footer from './Components/Footer/Footer';
+import Navbar from './Components/Navbar/Navbar';
+
 const App = () => {
   return (
-    <div className="App">
-    </div>
-  );
+    <>  
+        <div className='App'>
+            <Navbar/>
+            <Footer/>
+        </div>
+    </>
+  )
 }
 
 export default App;
