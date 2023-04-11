@@ -2,6 +2,11 @@ import { Link } from "react-router-dom";
 
 const Navbar = () => {
 
+  const formSubmit = (event) => {
+    event.preventDefault();
+    console.log(event.target.searchString.value);
+  }  
+
   return (
     <nav className= "navbar navbar-expand-lg bg-dark py-1" >
         <div className="container-fluid navbar-dark">
@@ -20,9 +25,9 @@ const Navbar = () => {
                     <Link className="nav-link" to="/cart">Cart</Link>
                 </li>
             </ul>
-            <form class="d-flex" role="search">
-                <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search"/>
-                <button class="btn btn-outline-success" type="submit">Search</button>
+            <form onSubmit={(event) => formSubmit(event)} class="d-flex" role="search">
+                <input className="form-control me-2" type="search" name="searchString" placeholder="Search" aria-label="Search"/>
+                <button className="btn btn-outline-success" type="submit">Search</button>
             </form>
         </div>
         </div>
